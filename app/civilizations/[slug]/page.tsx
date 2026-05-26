@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { civilizations } from "@/data/civilizations";
 import { CollapseTimeline } from "@/components/timeline/CollapseTimeline";
+import { CollapseFactors } from "@/components/dashboard/CollapseFactors";
 
 export default async function CivilizationPage(
   props: PageProps<"/civilizations/[slug]">,
@@ -54,6 +55,7 @@ export default async function CivilizationPage(
           </div>
         </div>
 
+        <CollapseFactors factors={civilization.factors} />
         <CollapseTimeline events={civilization.timeline} />
       </section>
     </main>

@@ -18,7 +18,7 @@ export function HeroSection() {
         </p>
 
         <a
-          href="#civilizations"
+          href="/civilizations"
           className="mt-10 inline-block rounded-full border border-[#c6a972] px-8 py-4 text-sm uppercase tracking-[0.2em] transition hover:bg-[#c6a972] hover:text-black"
         >
           Start Exploring

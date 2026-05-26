@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CivilizationCard } from "@/components/civilization/CivilizationCard";
+import { CivilizationExplorer } from "@/components/civilization/CivilizationExplorer";
 import { civilizations } from "@/data/civilizations";
 
 export default function CivilizationsPage() {
@@ -24,14 +24,7 @@ export default function CivilizationsPage() {
           Compare Civilizations
         </Link>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {civilizations.map((civilization) => (
-            <CivilizationCard
-              key={civilization.slug}
-              civilization={civilization}
-            />
-          ))}
-        </div>
+        <CivilizationExplorer civilizations={civilizations} />
       </section>
     </main>
   );

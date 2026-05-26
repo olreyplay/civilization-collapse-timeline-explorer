@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CivilizationCard } from "@/components/civilization/CivilizationCard";
 import { civilizations } from "@/data/civilizations";
 
@@ -15,6 +16,13 @@ export default function CivilizationsPage() {
           Browse historical civilizations and compare the political, military,
           economic, and environmental forces behind their decline.
         </p>
+
+        <Link
+          href="/compare"
+          className="mt-8 inline-block rounded-full border border-[#c6a972] px-6 py-3 text-sm uppercase tracking-[0.2em] text-[#c6a972] transition hover:bg-[#c6a972] hover:text-black"
+        >
+          Compare Civilizations
+        </Link>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {civilizations.map((civilization) => (
